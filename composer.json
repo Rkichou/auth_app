@@ -1,0 +1,10 @@
+{
+    "require": {
+        "symfony/orm-pack": "^2.4",
+        "symfony/security-bundle": "^7.3",
+        "symfony/twig-bundle": "^7.3",
+        "symfony/ux-turbo": "^2.30",
+        "doctrine/doctrine-bundle": "^2.16",
+        "doctrine/doctrine-migrations-bundle": "^3.4"
+    }
+}

@@ -1,0 +1,7 @@
+<h2>Détail utilisateur</h2>
+<ul>
+    <li>ID : {{ user.id }}</li>
+    <li>Nom : {{ user.name }}</li>
+    <li>Email : {{ user.email }}</li>
+</ul>
+<button hx-get="{{ path('user_index') }}" hx-target="#user-list" hx-swap="innerHTML">Retour à la liste</button>
