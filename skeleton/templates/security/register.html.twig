@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="max-w-md mx-auto mt-10 p-8 bg-white rounded shadow">
+    <h2 class="text-2xl font-bold mb-6">Inscription</h2>
+    {{ form_start(form) }}
+        <div class="mb-4">{{ form_row(form.email, {'attr': {'class': 'block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'}}) }}</div>
+        <div class="mb-4">{{ form_row(form.name, {'attr': {'class': 'block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'}}) }}</div>
+        <div class="mb-4">{{ form_row(form.password, {'attr': {'class': 'block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'}}) }}</div>
+        <button class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">Créer le compte</button>
+    {{ form_end(form) }}
+    <div class="mt-4 text-center">
+        <a href="{{ path('login') }}" class="text-blue-500 hover:underline">Déjà inscrit ? Se connecter</a>
+    </div>
+</div>
+{% endblock %}

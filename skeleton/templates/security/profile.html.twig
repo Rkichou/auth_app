@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="max-w-md mx-auto mt-10 p-8 bg-white rounded shadow">
+    <h2 class="text-2xl font-bold mb-6">{{ app.user.name }}</h2>
+
+<div class="card card-side bg-base-100 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+      alt="Movie" />
+  </figure>
+  <div class="card-body">
+  <h2 class="card-title">{{ app.user.email }}</h2>
+    <p>stylé la photo non ?? </p>
+    <div class="card-actions justify-end">
+    </div>
+  </div>
+</div>
+    {% for message in app.flashes('success') %}
+        <div class="mb-4 p-2 bg-green-100 text-green-700 rounded">{{ message }}</div>
+    {% endfor %}
+    {{ form_start(form) }}
+        <div class="mb-4">{{ form_row(form.email, {'attr': {'class': 'block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'}}) }}</div>
+        <div class="mb-4">{{ form_row(form.name, {'attr': {'class': 'block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'}}) }}</div>
+        <div class="mb-4">{{ form_row(form.password, {'attr': {'class': 'block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'}}) }}</div>
+        <button class="w-full px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">Mettre à jour</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
